@@ -1,4 +1,4 @@
-//Author: FirstName LastName
+//Author: Hamzah Saleh
 
 /******************************************************************************
                                    sumDouble
@@ -16,9 +16,18 @@ sumDouble(2, 2) → 8
 
 
 function sumDouble(a, b) {
+  if (a === b) {
+    console.log("equal");
+    return (a + b) * 2;
+
+  } else {
+    console.log("not equal");
+    return a + b;
+  }
 
 }
 
+// sumDouble(4,6);
 
 /******************************************************************************
                                    makes10
@@ -36,7 +45,13 @@ makes10(1, 9) → true
 
 function makes10(a, b) {
 
+  if (a === 10 || b === 10 || a + b === 10) {
+    return true;
+  } else { return false;}
+
 }
+makes10(5,5);
+makes10(9,11);
 
 
 /******************************************************************************
@@ -55,15 +70,20 @@ parrotTrouble(false, 6) → false
 *******************************************************************************/
 
 function parrotTrouble(talking, hour) {
-
+  if ( talking === true && (hour < 7 || hour > 20)) {
+    return  true;
+  }
+  else {
+    return false;
+  }
 }
-
+ parrotTrouble();
 
 /******************************************************************************
                                    alarmClock
 
 Instructions:
-Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean
+Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue,3=wen 4=thurs 5=fri ...6=Sat, and a boolean
 indicating if we are on vacation, return a string of the form "7:00" indicating
 when the alarm clock should ring. Weekdays, the alarm should be "7:00" and on
 the weekend it should be "10:00". Unless we are on vacation -- then on weekdays
@@ -76,8 +96,22 @@ alarmClock(0, false) → "10:00"
 *******************************************************************************/
 
 function alarmClock(day, vacation) {
+  if (day >= 1 || day <= 5){
 
-}
+
+  } if ( vacation === true ) {
+       return "10:00";
+     } else{
+       return "7:00";
+
+       if ( vacation === true ){
+         return "off";
+       } else {
+         return "10:00";
+       }
+    }
+
+
 
 
 /******************************************************************************
@@ -98,8 +132,20 @@ caughtSpeeding(65, true) → 0
 *******************************************************************************/
 
 function caughtSpeeding(speed, isBirthday) {
+   if (speed <= 60) {
+     return 0; }
+     if else(speed >= 61 || speed <=80 ) {
+     return 1; }
+     else if( speed >= 81){
+       return 2;
+     }
+     else if (speed isBirthday) {
+       return 0;
 
-}
+     }
+
+   }
+
 
 /****************************************************************************
                                     Tests
