@@ -209,10 +209,8 @@ function sayNumber(num) {
     let hundredsStringNum = sayZeroNine(hundredsNum) + " - hundreds";
     let onesNum = ( num % 10 );
     let onesStringNum = sayZeroNine(onesNum);
-
-
-    let tensNum = Math.floor((num % 100) / 10 );
-    let tensStringNum = sayTwentyNinety(tensNum);
+    let tensNum = Math.floor((num % 100) / 10 )
+    let tensStringNum = sayTenNineteen(tensNum)
 
     // = sayTenNineteen(tensNum)
 
@@ -246,7 +244,7 @@ function sayNumber(num) {
 *******************************************************************************/
 function run() {
   printGreeting();
-  let num =Number(readline.question("Pleas input a number from 0 to 9999 "));
+  let num = Number(readline.question("Pleas input a number from 0 to 9999 "));
   // console.log(sayZeroNine(5));
   // console.log(sayTenNineteen(12));
   // console.log(sayTwentyNinety(7));

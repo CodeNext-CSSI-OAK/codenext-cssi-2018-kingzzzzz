@@ -1,4 +1,4 @@
-//Author: FirstName LastName
+//Author: Hamzah Saleh
 
 /******************************************************************************
                                    withoutEnd()
@@ -15,11 +15,18 @@ withoutEnd("coding") → "odin"
 *******************************************************************************/
 
 function withoutEnd(str) {
+  if ( str.length < 3) {
+    return str;
+  } else {
+  let firstChar =  str.substring(0, 1)
+  let lastChar = str.charAt(str.length -1)
 
+  }
+return str;
 }
 
-// Test this function.
-testWithoutEnd();
+
+console.log(testWithoutEnd("hello"));
 
 /******************************************************************************
                                    frontAgain()
@@ -37,8 +44,18 @@ frontAgain("ed") → true
 
 
 function frontAgain(str) {
+  if (str.length > 3) {
+  if ( str.substring(0, 2) === str.substring(str.length -2) ) {
+    return true;
+  }
+}
+  else {
+    return false;
+  }
 
 }
+
+
 
 // Test this function.
 testFrontAgain();
@@ -58,6 +75,9 @@ deFront("away") → "aay"
 *******************************************************************************/
 
 function deFront(str) {
+  if ( str.charAt(0)  === "a" || str.charAt(1) === "b") {
+    str.length 
+  }
 
 }
 
