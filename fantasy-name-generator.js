@@ -2,7 +2,7 @@
 var readline = require("readline-sync");
 
 // global variables
-var firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
+var firstName, lastName, momMaidenName, cityBorn, favSport, friendName, fantasyName;
 
 /******************************************************************************
                                   getNewFirstName()
@@ -13,7 +13,7 @@ var firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
 *******************************************************************************/
 
 function getNewFirstName() {
-
+  return firstName.substring(0, 3) + lastName.substring(0, 2).toLowerCase();
 }
 
 /******************************************************************************
@@ -25,6 +25,7 @@ function getNewFirstName() {
 *******************************************************************************/
 
 function getNewLastName() {
+  return momMaidenName.substring(0, 2) + cityBorn.substring(0, 3) ;
 
 }
 
@@ -36,6 +37,7 @@ function getNewLastName() {
 *******************************************************************************/
 
 function getTitle() {
+  return lastName.charAt(lastName.length -3) + favSport ;
 
 }
 
@@ -47,7 +49,7 @@ function getTitle() {
 *******************************************************************************/
 
 function getHonorific() {
-
+ return "of " + favSport ;
 }
 
 /******************************************************************************
@@ -62,6 +64,17 @@ function getHonorific() {
 
 function run() {
 
+ firstName = readline.question("What is your first name")
+ lastName = readline.question("What is your last")
+ momMaidenName = readline.question("What is your Mothers name")
+ cityBorn = readline.question("What city were you born in")
+ favSport = readline.question("What is your favorite sport")
+ friendName = readline.question("What is your friends name")
+
+ console.log("Your name is " + " " + getNewFirstName() + " " + getNewLastName()  + " " + getTitle() + " " + getHonorific());
+ //console.log(getNewLastName());
+ //console.log(getTitle());
+ //console.log(getHonorific());
 }
 
 // Run the program!

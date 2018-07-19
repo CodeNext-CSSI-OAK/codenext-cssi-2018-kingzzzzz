@@ -1,5 +1,5 @@
-//Author: FirstName LastName
-
+//Author: Hamzah Saleh
+//let readline = require("readline-sync");
 /******************************************************************************
                                    stringTimes()
 
@@ -12,11 +12,17 @@ stringTimes("Hi", 2) → "HiHi"
 stringTimes("Hi", 3) → "HiHiHi"
 stringTimes("Hi", 1) → "Hi"
 *******************************************************************************/
+//let str = readline.question("Please input a word ");
+//let n = Number(readline.question("Please input a number "))
 
 function stringTimes(str, n) {
+  let string = "";
+for ( i = 0; i < n; i ++ ) {
+   string += str;
 
 }
-
+return string;
+  }
 // Test this function.
 testStringTimes();
 
@@ -34,6 +40,12 @@ countXX("xxxx") → 3
 *******************************************************************************/
 
 function countXX(str) {
+  let countX = 0;
+  for(i = 0; i <str.lrngth; i ++) {
+    if(str.substring(i, i + 2) == "xx") {
+      countX++;
+    }
+  }
 
 }
 
@@ -54,7 +66,9 @@ bobThere("bac") → false
 *******************************************************************************/
 
 function bobThere(str) {
-
+  string = ""
+ for()
+ m ;
 }
 
 // Test this function.
